@@ -14,7 +14,7 @@ s.connect(('192.168.59.74', port))
 print s.recv(1024)
 
 # prompt input for command
-while TRUE:
+while True:
   print("Input command: ")
   cmd = input()
   if cmd=='help':
