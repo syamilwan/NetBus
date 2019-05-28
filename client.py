@@ -8,17 +8,18 @@ s = socket.socket()
 port = 12345                
   
 # connect to the server on local computer 
-s.connect(('192.168.59.74', port)) 
+s.connect(('192.168.59.74', port))
+print('Connection request sent')
   
 # receive data from the server 
 print s.recv(1024)
 
 # prompt input for command
 while True:
-  print("Input command: ")
-  cmd = input()
+  print("Input command: ") cmd = input()
+  
   if cmd=='help':
-    print("COMMAND LISTS: ")
+    print("Command list: ")
   elif cmd=='shutdown':
     print("Shutting down server")
   elif cmd=='quit':
