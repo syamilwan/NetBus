@@ -14,21 +14,23 @@ print('Connection request sent')
 # receive data from the server 
 print s.recv(1024)
 
-# prompt input for command
-while True:
+# prompt input for command loop
+prompt=True
+while prompt:
   print("Input command: ") 
   cmd = input()
+  print("Input %s received." % cmd)
   
   if cmd=="help":
     print("Command list: ")
     s.send("help")
-  elif cmd=="shutdown":
+  elif cmd=="shut":
     print("Shutting down server")
     s.send("shutdown")
   elif cmd=="quit":
     print("Quiting the connection to server")
     s.close()  # close the connection
-    break
+    prompt=False
   else:
     print("Unrecognized input, input 'help' for manual")
  
