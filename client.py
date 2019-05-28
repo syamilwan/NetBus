@@ -21,15 +21,16 @@ while True:
   
   if cmd=="help":
     print("Command list: ")
+    s.send("help")
   elif cmd=="shutdown":
     print("Shutting down server")
+    s.send("shutdown")
   elif cmd=="quit":
     print("Quiting the connection to server")
     s.close()  # close the connection
     break
   else:
-    print("Unrecognized input, enter help for manual")
-  s.send(cmd)
+    print("Unrecognized input, input 'help' for manual")
  
 
 
