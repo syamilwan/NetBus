@@ -16,13 +16,14 @@ print s.recv(1024)
 
 # prompt input for command
 while True:
-  print("Input command: ") cmd = input()
+  print("Input command: ") 
+  cmd = input()
   
-  if cmd=='help':
+  if cmd=="help":
     print("Command list: ")
-  elif cmd=='shutdown':
+  elif cmd=="shutdown":
     print("Shutting down server")
-  elif cmd=='quit':
+  elif cmd=="quit":
     print("Quiting the connection to server")
     s.close()  # close the connection
     break
