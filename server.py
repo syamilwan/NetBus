@@ -25,6 +25,6 @@ while True:
   
    # send a message to the client.  
    c.send('>Connected') 
-  
+   print c.recv(1024)
    ## This code should always in listening state
    #c.close() 
