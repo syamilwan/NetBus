@@ -27,5 +27,7 @@ while TRUE:
     break
   else:
     print("Unrecognized input, enter help for manual")
+  c.send(cmd)
+ 
 
 
