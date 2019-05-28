@@ -18,15 +18,15 @@ print s.recv(1024)
 prompt=True
 while prompt:
   print("Input command: ") 
-  cmd = input()
+  hntar = input()
   print("Input %s received." % cmd)
   
   if cmd=="help":
     print("Command list: ")
-    s.send("help")
+    s.send(hantar)
   elif cmd=="shut":
     print("Shutting down server")
-    s.send("shutdown")
+    s.send(hantar)
   elif cmd=="quit":
     print("Quiting the connection to server")
     s.close()  # close the connection
