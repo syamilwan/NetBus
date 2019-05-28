@@ -8,11 +8,7 @@ print "Socket successfully created"
 # reserve a port
 port = 12345                
   
-# Next bind to the port 
-# we have not typed any ip in the ip field 
-# instead we have inputted an empty string 
-# this makes the server listen to requests  
-# coming from other computers on the network 
+# Next bind to the port, inputted an empty string makes the server listen to requests
 s.bind(('', port))         
 print "socket binded to %s" %(port) 
   
@@ -20,16 +16,15 @@ print "socket binded to %s" %(port)
 s.listen(5)      
 print "socket is listening"            
   
-# a forever loop until we interrupt it or  
-# an error occurs 
+# a infinite loop until interrupted or error occurs 
 while True: 
-  
+
    # Establish connection with client. 
    c, addr = s.accept()      
    print 'Got connection from', addr 
   
-   # send a thank you message to the client.  
-   c.send('Thank you for connecting') 
+   # send a message to the client.  
+   c.send('>Connected') 
   
-   # Close the connection with the client 
-   c.close() 
+   ## This code should always in listening state
+   #c.close() 
