@@ -18,8 +18,8 @@ print s.recv(1024)
 prompt=True
 while prompt:
   print("Input command: ") 
-  hntar = input()
-  print("Input %d received." % cmd)
+  hantar = input()
+  print("Input %d received." % hantar)
   
   if cmd==1:
     print("Command list: ")
