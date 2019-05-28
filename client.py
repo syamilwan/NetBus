@@ -18,7 +18,7 @@ print s.recv(1024)
 prompt=True
 while prompt:
   print("Input command: ") 
-  hantar = input()
+  hantar = raw_input()
   print("Input %s received." % hantar)
   
   if hantar=='infoo':
