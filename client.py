@@ -21,13 +21,13 @@ while prompt:
   hantar = input()
   print("Input %d received." % hantar)
   
-  if cmd==1:
+  if hantar==1:
     print("Command list: ")
     s.send(hantar)
-  elif cmd==2:
+  elif hantar==2:
     print("Shutting down server")
     s.send(hantar)
-  elif cmd==3:
+  elif hantar==3:
     print("Quiting the connection to server")
     s.close()  # close the connection
     prompt=False
