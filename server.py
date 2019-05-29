@@ -29,15 +29,14 @@ while True:
     sLoop='xx'
    else:
     sLoop='ok'
-   
+   dapat=c.recv(1024)
    # receiving commands loop
    while sLoop=='ok':
-     if c.recv=='quitt':
-      print c.recv(1024)
+     if dapat=='quitt':
+      print dapat
       sLoop='xx'
-      
      else:
-      print c.recv(1024)
+      print dapat
    
    # display disconnected client
    c.close()
