@@ -23,6 +23,8 @@ while True:
    c, addr = s.accept()
    c.send('>Connected')
    print "Connection from", addr
+   
+   # receiving commands loop
    sLoop='ok'
    while sLoop=='ok':
      if c.recv=='quitt':
@@ -30,3 +32,6 @@ while True:
       sLoop='xx'
      else:
       print c.recv(1024)
+   
+   # display disconnected client
+   print addr, "Disconnected"
