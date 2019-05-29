@@ -23,13 +23,19 @@ while True:
    c, addr = s.accept()
    c.send('>Connected')
    print "Connection from", addr
+  
+   # if connected activate sLoop
+   if addr is None:
+    sLoop='xx'
+   else:
+    sLoop='ok'
    
    # receiving commands loop
-   sLoop='ok'
    while sLoop=='ok':
      if c.recv=='quitt':
       print c.recv(1024)
       sLoop='xx'
+      break
      else:
       print c.recv(1024)
    
