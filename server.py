@@ -21,7 +21,7 @@ while True:
 
    # Establish connection with client. 
    c, addr = s.accept()     
-   dapat = c.recv(1024)
+   dapat = s.recv(1024)
    print ("Got command from", addr)
    print dapat
    # send a message to the client.  
