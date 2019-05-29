@@ -15,16 +15,17 @@ print "socket binded to %s" %(port)
 # put the socket into listening mode 
 s.listen(5)      
 print "socket is listening"            
-  
-# a infinite loop until interrupted or error occurs 
+
+# a infinite loop until interrupted or error occurs (always in listening state)
 while True: 
 
    # Establish connection with client. 
    c, addr = s.accept()
-   print "Got command from", addr
-   
-   # send a message to the client.  
    c.send('>Connected')
-   print c.recv(1024)
-   ## This code should always in listening state
-   #c.close() 
+   print "Connection from", addr
+   sLoop=True
+   while sLoop==True
+     if c.recv=='quitt'
+      sLoop=False
+     else
+      print c.recv(1024)
