@@ -23,20 +23,12 @@ while True:
    c, addr = s.accept()
    c.send('>Connected')
    print "Connection from", addr
-  
-   # if connected activate sLoop
-   if addr is None:
-    sLoop='xx'
-   else:
-    sLoop='ok'
+
    dapat=c.recv(1024)
-   # receiving commands loop
-   while sLoop=='ok':
-     if dapat=='quitt':
-      print dapat
-      sLoop='xx'
-     else:
-      print dapat
+   if dapat=='quitt':
+    print '>', dapat
+   else:
+    print '>', dapat
    
    # display disconnected client
    c.close()
