@@ -22,9 +22,9 @@ while True:
    # Establish connection with client. 
    c, addr = s.accept()     
    dapat = c.recv(1024)
-   print ("Got %s from", addr % dapat)
-  
+   
    # send a message to the client.  
    c.send('>Connected')
+   print ("Got %s from", addr % dapat)
    ## This code should always in listening state
    #c.close() 
