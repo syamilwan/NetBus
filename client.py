@@ -28,6 +28,7 @@ while prompt:
     s.send(hantar)
   elif hantar=='quitt':
     print("Quiting the connection to server")
+    s.send(hantar)
     s.close()  # close the connection
     prompt=False
   else:
