@@ -24,7 +24,7 @@ while True:
    c.send('>Connected')
    print "Connection from", addr
    sLoop='ok'
-   while sLoop=='ok'
+   while sLoop=='ok':
      if c.recv=='quitt'
       print c.recv(1024)
       sLoop='xx'
