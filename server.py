@@ -20,10 +20,9 @@ print "socket is listening"
 while True: 
 
    # Establish connection with client. 
-   c, addr = s.accept()     
-   dapat = s.recv(1024)
+   c, addr = s.accept()
    print ("Got command from", addr)
-   print dapat
+   print s.recv(1024)
    # send a message to the client.  
    c.send('>Connected')
 
