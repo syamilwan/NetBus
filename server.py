@@ -18,7 +18,7 @@ print "socket is listening"
 
 # a infinite loop until interrupted or error occurs (always in listening state)
 while True: 
-
+   
    # Establish connection with client. 
    c, addr = s.accept()
    c.send('>Connected')
@@ -35,7 +35,7 @@ while True:
      if c.recv=='quitt':
       print c.recv(1024)
       sLoop='xx'
-      break
+      c.close()
      else:
       print c.recv(1024)
    
