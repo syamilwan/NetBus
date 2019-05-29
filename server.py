@@ -23,9 +23,10 @@ while True:
    c, addr = s.accept()
    c.send('>Connected')
    print "Connection from", addr
-   sLoop=True
-   while sLoop==True
+   sLoop='ok'
+   while sLoop=='ok'
      if c.recv=='quitt'
-      sLoop=False
+      print c.recv(1024)
+      sLoop='xx'
      else
       print c.recv(1024)
