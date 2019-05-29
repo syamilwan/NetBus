@@ -25,8 +25,8 @@ while True:
    print "Connection from", addr
    sLoop='ok'
    while sLoop=='ok':
-     if c.recv=='quitt'
+     if c.recv=='quitt':
       print c.recv(1024)
       sLoop='xx'
-     else
+     else:
       print c.recv(1024)
