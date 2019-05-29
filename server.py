@@ -35,9 +35,10 @@ while True:
      if c.recv=='quitt':
       print c.recv(1024)
       sLoop='xx'
-      c.close()
+      
      else:
       print c.recv(1024)
    
    # display disconnected client
+   c.close()
    print addr, "Disconnected"
