@@ -21,8 +21,8 @@ while True:
 
    # Establish connection with client. 
    c, addr = s.accept()
-   print ("Got command from", addr)
-   print s.recv(1024)
+   print "Got command from", addr
+   print c.recv(1024)
    # send a message to the client.  
    c.send('>Connected')
 
