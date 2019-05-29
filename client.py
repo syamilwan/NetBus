@@ -19,7 +19,6 @@ prompt=True
 while prompt:
   print("Input command: ") 
   hantar = raw_input()
-  print("Input %s received." % hantar)
   
   if hantar=='infoo':
     print("Command list: ---")
