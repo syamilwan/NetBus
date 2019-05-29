@@ -12,24 +12,28 @@ port = 12345
 s.bind(('', port))         
 print "socket binded to %s" %(port) 
   
-# put the socket into listening mode 
-s.listen(5)      
-print "socket is listening"            
+        
 
 # a infinite loop until interrupted or error occurs (always in listening state)
 while True: 
-   
+   # put the socket into listening mode 
+   s.listen(5)      
+   print "socket is listening"    
    # Establish connection with client. 
    c, addr = s.accept()
    c.send('>Connected')
    print "Connection from", addr
-
-   dapat=c.recv(1024)
-   if dapat=='quitt':
-    print '>', dapat
-   else:
-    print '>', dapat
+   sLoop='go'
+   while sLoop!='stop'
+     dapat=c.recv(1024)
+     print '>', dapat
+     if dapat=='quitt':
+      print addr, "Disconnected"
+      c.close()
+     elif dapat=='shutt':
+      print "Shutting Down"
+     else:
+      print '>', dapat
    
-   # display disconnected client
-   c.close()
-   print addr, "Disconnected"
+   
+   
