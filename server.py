@@ -24,10 +24,9 @@ while True:
    c.send('>Connected')
    print "Connection from", addr
    sLoop='go'
-   socklen=len(s)
    
    while sLoop!='stop':
-     dapat=c.recv(socklen)
+     dapat=c.recv(5)
      print '>', dapat
      if dapat=='quitt':
       print addr, "Disconnected"
@@ -35,7 +34,10 @@ while True:
      elif dapat=='shutt':
       print "Shutting Down"
      else:
-      print '>', dapat
+      print 'Unknown'
+      break
    
+   print addr, 'Disconnected'
+   c.close()
    
    
