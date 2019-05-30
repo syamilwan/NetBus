@@ -30,14 +30,16 @@ while True:
      print '>', dapat
      if dapat=='quitt':
       print addr, "Disconnected"
-      c.close()
+      break
      elif dapat=='shutt':
       print "Shutting Down"
      else:
       print 'Unknown'
       break
    
-   print addr, 'Disconnected'
+   # closing current socket
    c.close()
+   print addr, 'Disconnected'
+   
    
    
