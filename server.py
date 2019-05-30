@@ -24,7 +24,7 @@ while True:
    c.send('>Connected')
    print "Connection from", addr
    sLoop='go'
-   socklen=len(c)
+   socklen=len(s)
    
    while sLoop!='stop':
      dapat=c.recv(socklen)
