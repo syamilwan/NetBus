@@ -29,12 +29,12 @@ while True:
      dapat=c.recv(5)
      print '>', dapat
      if dapat=='quitt':
-      print addr, "Disconnected"
+      print addr, "will be disconnected"
       break
      elif dapat=='shutt':
       print "Shutting Down"
      else:
-      print 'Unknown'
+      print 'Unknown Command'
       break
    
    # closing current socket
