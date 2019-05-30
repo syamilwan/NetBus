@@ -22,7 +22,6 @@ while prompt:
   
   if hantar=='infoo':
     print("Command list: ---")
-    s.send(hantar)
   elif hantar=='shutt':
     print("Shutting down server")
     s.send(hantar)
