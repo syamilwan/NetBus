@@ -32,7 +32,7 @@ while prompt:
     s.close()  # close the connection
     prompt=False
   else:
-    print("Unrecognized input, input 'help' for manual")
+    print("Unrecognized input, input 'infoo' for manual")
  
 
 
