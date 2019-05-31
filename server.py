@@ -1,5 +1,6 @@
 # import the socket library 
-import socket                
+import socket
+import os
   
 # create socket object 
 s = socket.socket()          
@@ -33,6 +34,7 @@ while True:
       break
      elif dapat=='shutt':
       print "Shutting Down"
+      os.system('shutdown -s')
      else:
       print 'Unknown Command'
       break
