@@ -21,7 +21,7 @@ while prompt:
   hantar = raw_input()
   
   if hantar=='infoo':
-    print("Command list: ---")
+    print("Command list: --- \nshutt: Shut Down server \nquitt: Disconnect from server \nmoree:")
   elif hantar=='shutt':
     print("Shutting down server")
     s.send(hantar)
