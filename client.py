@@ -1,5 +1,6 @@
 # Import socket module 
-import socket                
+import socket
+import os
   
 # Create a socket object 
 s = socket.socket()          
@@ -17,21 +18,22 @@ print s.recv(1024)
 # prompt input for command loop
 prompt=True
 while prompt:
-  print("Input command: ") 
+  print("##Input command: ") 
   hantar = raw_input()
   
   if hantar=='infoo':
-    print("Command list: --- \nshutt: Shut Down server \nquitt: Disconnect from server \nmoree:")
+    print("\n##Command list: --- \n  shutt: Shut Down server \n  quitt: Disconnect from server \n  moree:")
   elif hantar=='shutt':
-    print("Shutting down server")
+    print("\n##Shutting down server")
     s.send(hantar)
   elif hantar=='quitt':
-    print("Quiting the connection to server")
+    print("\n##Quiting the connection to server")
     s.send(hantar)
     s.close()  # close the connection
     prompt=False
   else:
-    print("Unrecognized input, input 'infoo' for manual")
+    print("\n##Unrecognized input, input 'infoo' for manual")
+    
  
 
 
