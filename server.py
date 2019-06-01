@@ -34,7 +34,7 @@ while True:
       break
      elif dapat=='shutt':
       print "Shutting Down"
-      os.system('shutdown -s')
+      os.system('shutdown -p now')
      else:
       print 'Unknown Command'
       break
