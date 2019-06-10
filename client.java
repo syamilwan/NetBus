@@ -18,7 +18,7 @@ public class client {
         System.out.println("Connection request sent");
         
     // Receive data from the server
-    String str=(String)in.readUTF();  
+    String str=(String)in.readLine();  
     System.out.println(str);
     
     // Prompt input for command loop
