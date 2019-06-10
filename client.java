@@ -28,11 +28,7 @@ public class client {
       prompt = input.readLine();
       
       if (prompt.equals("-help")){
-        System.out.println("\n##Command list: --- 
-                            \n  -shut: Shut Down server 
-                            \n  -quit: Disconnect from server 
-                            \n  -spam: Spam clicks on server 
-                            \n  coming soon: --")
+        System.out.println("\n##Command list: ---\n  -shut: Shut Down server \n  -quit: Disconnect from server \n  -spam: Spam clicks on server \n  coming soon: --")
       }
       else if (prompt.equals("-shut")){
         System.out.println("\n##Shutting down server");
