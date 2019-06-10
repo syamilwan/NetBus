@@ -25,7 +25,7 @@ public class client {
     String prompt="";
     while(!prompt.equals("-quit")){
       System.out.println("\n##Input command: ");
-      prompt = input.readLine();
+      prompt = in.readLine();
       
       if (prompt.equals("-help")){
         System.out.println("\n##Command list: ---\n  -shut: Shut Down server \n  -quit: Disconnect from server \n  -spam: Spam clicks on server \n  coming soon: --");
