@@ -9,7 +9,7 @@ s = socket.socket()
 port = 12345                
   
 # connect to the server on local computer 
-s.connect(('192.168.59.74', port))
+s.connect(('192.168.59.75', port))
 print('Connection request sent')
   
 # receive data from the server 
