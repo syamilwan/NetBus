@@ -21,18 +21,18 @@ while prompt:
   print("\n##Input command: ") 
   hantar = raw_input()
   
-  if hantar=='helpp':
-    print("\n##Command list: --- \n  shutt: Shut Down server \n  quitt: Disconnect from server \n  moree:")
-  elif hantar=='shutt':
+  if hantar=='-help':
+    print("\n##Command list: --- \n  -shut: Shut Down server \n  quit: Disconnect from server \n  more:")
+  elif hantar=='-shut':
     print("\n##Shutting down server")
     s.send(hantar)
-  elif hantar=='quitt':
+  elif hantar=='-quit':
     print("\n##Quiting the connection to server")
     s.send(hantar)
     s.close()  # close the connection
     prompt=False
   else:
-    print("\n##Unrecognized input, input 'helpp' for manual")
+    print("\n##Unrecognized input, input '-help' for manual")
     
  
 
