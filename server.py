@@ -29,10 +29,10 @@ while True:
    while sLoop!='stop':
      dapat=c.recv(5)
      print '>', dapat
-     if dapat=='quitt':
+     if dapat=='-quit':
       print addr, "will be disconnected"
       break
-     elif dapat=='shutt':
+     elif dapat=='-shut':
       print "Shutting Down"
       os.system('shutdown -p now')
      else:
