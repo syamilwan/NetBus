@@ -32,12 +32,12 @@ public class client {
       }
       else if (prompt.equals("-shut")){
         System.out.println("\n##Shutting down server");
-        out.writeUTF(prompt);
+        out.println(prompt);
         break;
       }
       else if (prompt.equals("-quit")){     
         System.out.println("\n##Quiting the connection to server");
-        out.writeUTF(prompt);
+        out.println(prompt);
       }
       //else if (prompt.equals("-")){
         
@@ -45,6 +45,7 @@ public class client {
       else{   
         System.out.println("\n##Unrecognized input, input 'helpp' for manual");
       }
+      out.flush();
     }
 
     sock.close(); // Close the connection
