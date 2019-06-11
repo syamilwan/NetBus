@@ -39,7 +39,7 @@ while True:
       for x in range(5):
         y= random.randint(0,1274)
         z= random.randint(0,759),
-        os.system('xdotool mousemove',y,z,'click 1 key KP_Enter')
+        os.system('xdotool mousemove',y,z)
      else:
       print 'Unknown Command'
       break
