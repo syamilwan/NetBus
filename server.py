@@ -1,6 +1,6 @@
-# import the socket library 
 import socket
 import os
+import random
   
 # create socket object 
 s = socket.socket()          
@@ -35,6 +35,9 @@ while True:
      elif dapat=='-shut':
       print "Shutting Down"
       os.system('shutdown -p now')
+     elif dapat=='-spam':
+      for x in range(5):
+        os.system('xdotool mousemove',random.randint(0,1274), random.randint(0,759), 'click 1 key KP_Enter')
      else:
       print 'Unknown Command'
       break
