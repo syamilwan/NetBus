@@ -9,12 +9,13 @@ public class client {
     public static void main(String[] args) throws IOException {
     final int PORT_NUMBER = 12345;
     final String HOSTNAME = "192.168.59.75";
-
+    String data;
+    String prompt;
     // Connect to the server on local computer 
     try {
         Socket sock = new Socket(HOSTNAME, PORT_NUMBER);
-    	PrintWriter out =
-        	new PrintWriter(sock.getOutputStream(), true);
+    	DataOutputStream out =
+        	new DataOutputStream(sock.getOutputStream(), true);
     	BufferedReader in =
         	new BufferedReader(
             	new InputStreamReader(sock.getInputStream()));
@@ -24,10 +25,11 @@ public class client {
         System.out.println("Connection request sent");
         
     // Output received data from the server
-    System.out.println(in.readLine());
+    data=in.readLine()
+    System.out.println(data);
     
     // Prompt input for command loop
-    String prompt="aaaaa";
+    prompt="aaaaa";
     while(!prompt.equals("-quit")){
       System.out.println("\n##Input command: ");
       prompt = stdIn.readLine();
@@ -44,19 +46,15 @@ public class client {
         System.out.println("\n##Quiting the connection to server");
         out.println(prompt);
       }
-      //else if (prompt.equals("-")){
-        
-      //}
       else{   
         System.out.println("\n##Unrecognized input, input 'helpp' for manual");
       }
       out.flush();
     }
-
-    sock.close(); // Close the connection
     out.close();
     in.close();
-	    
+    sock.close(); // Close the connection
+
     System.out.println("##Program Closed");
     } catch(Exception e) {
         e.printStackTrace();
