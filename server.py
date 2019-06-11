@@ -38,8 +38,9 @@ while True:
      elif dapat=='-spam':
       for x in range(5):
         y= random.randint(0,1274)
-        z= random.randint(0,759),
-        os.system('xdotool mousemove',y,z)
+        z= random.randint(0,759)
+        zz='xdotool mousemove '+str(y)+' '+str(y)
+        os.system(zz)
      else:
       print 'Unknown Command'
       break
