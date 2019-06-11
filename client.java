@@ -14,9 +14,9 @@ public class client {
     // Connect to the server on local computer 
     try {
         Socket sock = new Socket(HOSTNAME, PORT_NUMBER);
-    	DataOutputStream out =
+    	DataOutputStream outt =
         	new DataOutputStream(sock.getOutputStream(), true);
-    	BufferedReader in =
+    	BufferedReader inn =
         	new BufferedReader(
             	new InputStreamReader(sock.getInputStream()));
     	BufferedReader stdIn =
@@ -25,7 +25,7 @@ public class client {
         System.out.println("Connection request sent");
         
     // Output received data from the server
-    data=in.readLine();
+    data=inn.readLine();
     System.out.println(data);
     
     // Prompt input for command loop
@@ -39,12 +39,12 @@ public class client {
       }
       else if (prompt.equals("-shut")){
         System.out.println("\n##Shutting down server");
-        out.println(prompt);
+        outt.println(prompt);
         break;
       }
       else if (prompt.equals("-quit")){     
         System.out.println("\n##Quiting the connection to server");
-        out.println(prompt);
+        outt.println(prompt);
       }
       else{   
         System.out.println("\n##Unrecognized input, input 'helpp' for manual");
