@@ -25,7 +25,7 @@ public class client {
         System.out.println("Connection request sent");
         
     // Output received data from the server
-    data=in.readLine()
+    data=in.readLine();
     System.out.println(data);
     
     // Prompt input for command loop
