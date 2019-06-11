@@ -22,7 +22,7 @@ while True:
 
    # Establish connection with client. 
    c, addr = s.accept()
-   c.send('>Connected')
+   c.send(">Connected")
    print "Connection from", addr
    sLoop='go'
    
