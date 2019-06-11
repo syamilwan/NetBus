@@ -1,7 +1,7 @@
 // Import module 
 import java.io.*;
 import java.net.*;
-import java.util.Scanner; 
+import java.util.*; 
 
 public class client {
 
@@ -23,9 +23,8 @@ public class client {
             	new InputStreamReader(System.in));
         System.out.println("Connection request sent");
         
-    // Receive data from the server
-    String str=(String)in.readLine();  
-    System.out.println(str);
+    // Output received data from the server
+    System.out.println(in.readLine());
     
     // Prompt input for command loop
     String prompt="aaaaa";
