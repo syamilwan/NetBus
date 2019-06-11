@@ -37,7 +37,9 @@ while True:
       os.system('shutdown -p now')
      elif dapat=='-spam':
       for x in range(5):
-        os.system('xdotool mousemove',random.randint(0,1274), random.randint(0,759), 'click 1 key KP_Enter')
+        y= random.randint(0,1274)
+        z= random.randint(0,759),
+        os.system('xdotool mousemove',y,z,'click 1 key KP_Enter')
      else:
       print 'Unknown Command'
       break
