@@ -46,8 +46,12 @@ public class client {
         System.out.println("\n##Quiting the connection to server");
         outt.println(prompt);
       }
+      else if (prompt.equals("-spam")){     
+        System.out.println("\n##Spamming the server with clicks");
+        outt.println(prompt);
+      }
       else{   
-        System.out.println("\n##Unrecognized input, input 'helpp' for manual");
+        System.out.println("\n\n#\n#\n##Unrecognized input, input '-help' for manual");
       }
       outt.flush();
     }
