@@ -39,7 +39,7 @@ while True:
       for x in range(5):
         y= random.randint(0,1274)
         z= random.randint(0,759)
-        zz='xdotool mousemove '+str(y)+' '+str(y)
+        zz='xdotool mousemove '+str(y)+' '+str(y)+' click 1'
         os.system(zz)
      else:
       print 'Unknown Command'
