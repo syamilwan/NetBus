@@ -14,8 +14,8 @@ public class client {
     // Connect to the server on local computer 
     try {
         Socket socket = new Socket(HOSTNAME, PORT_NUMBER);
-    	DataOutputStream outt =
-        	new DataOutputStream(socket.getOutputStream(), true);
+    	PrintWriter outt =
+        	new PrintWriter(socket.getOutputStream(), true);
     	BufferedReader inn =
         	new BufferedReader(
             	new InputStreamReader(socket.getInputStream()));
@@ -53,7 +53,7 @@ public class client {
     }
     outt.close();
     inn.close();
-    sock.close(); // Close the connection
+    socket.close(); // Close the connection
 
     System.out.println("##Program Closed");
     } catch(Exception e) {
