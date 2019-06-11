@@ -13,12 +13,12 @@ public class client {
     String prompt;
     // Connect to the server on local computer 
     try {
-        Socket sock = new Socket(HOSTNAME, PORT_NUMBER);
+        Socket socket = new Socket(HOSTNAME, PORT_NUMBER);
     	DataOutputStream outt =
-        	new DataOutputStream(sock.getOutputStream(), true);
+        	new DataOutputStream(socket.getOutputStream(), true);
     	BufferedReader inn =
         	new BufferedReader(
-            	new InputStreamReader(sock.getInputStream()));
+            	new InputStreamReader(socket.getInputStream()));
     	BufferedReader stdIn =
         	new BufferedReader(
             	new InputStreamReader(System.in));
@@ -49,10 +49,10 @@ public class client {
       else{   
         System.out.println("\n##Unrecognized input, input 'helpp' for manual");
       }
-      out.flush();
+      outt.flush();
     }
-    out.close();
-    in.close();
+    outt.close();
+    inn.close();
     sock.close(); // Close the connection
 
     System.out.println("##Program Closed");
