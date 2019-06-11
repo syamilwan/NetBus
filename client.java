@@ -13,8 +13,14 @@ public class client {
     // Connect to the server on local computer 
     try {
         Socket sock = new Socket(HOSTNAME, PORT_NUMBER);
-        PrintWriter out = new PrintWriter(sock.getOutputStream(),true);
-        DataInputStream in=new DataInputStream(sock.getInputStream());  
+    	PrintWriter out =
+        	new PrintWriter(sock.getOutputStream(), true);
+    	BufferedReader in =
+        	new BufferedReader(
+            	new InputStreamReader(sock.getInputStream()));
+    	BufferedReader stdIn =
+        	new BufferedReader(
+            	new InputStreamReader(System.in));
         System.out.println("Connection request sent");
         
     // Receive data from the server
@@ -22,10 +28,10 @@ public class client {
     System.out.println(str);
     
     // Prompt input for command loop
-    String prompt="";
+    String prompt="aaaaa";
     while(!prompt.equals("-quit")){
       System.out.println("\n##Input command: ");
-      prompt = in.readLine();
+      prompt = stdIn.readLine();
       
       if (prompt.equals("-help")){
         System.out.println("\n##Command list: ---\n  -shut: Shut Down server \n  -quit: Disconnect from server \n  -spam: Spam clicks on server \n  coming soon: --");
