@@ -43,7 +43,6 @@ while True:
         os.system(zz)
      else:
       print 'Unknown Command'
-      break
    
    # closing current socket
    c.close()
